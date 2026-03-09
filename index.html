@@ -130,53 +130,50 @@ color:white;
 cursor:pointer;
 }
 
-<nav class="menu">
+.menu{
+display:flex;
+gap:25px;
+align-items:center;
+}
 
-<a href="#">Anasayfa</a>
+.dropdown{
+position:relative;
+}
 
-<div class="dropdown">
-<button class="dropbtn">Ürün Kategorisi</button>
+.dropbtn{
+background:none;
+border:none;
+font-size:16px;
+cursor:pointer;
+}
 
-<div class="dropdown-content">
+.dropdown-content{
+display:none;
+position:absolute;
+background:#f3e5df;
+min-width:200px;
+padding:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
 
-<div class="submenu">
-<strong>Çanta</strong>
-<div class="submenu-content">
-<a href="#">Boncuk Çanta</a>
-</div>
-</div>
+.dropdown:hover .dropdown-content{
+display:block;
+}
 
-<div class="submenu">
-<strong>Ev</strong>
-<div class="submenu-content">
-<a href="#">Duvar Süsleri</a>
-<a href="#">Kapı Süsleri</a>
-<a href="#">Paspas</a>
-<a href="#">Saksı Kılıfı</a>
-<a href="#">Çerçeve</a>
-</div>
-</div>
+.dropdown-content a{
+display:block;
+padding:5px 0;
+text-decoration:none;
+color:#333;
+}
 
-<a href="#">Düğün & Nişan</a>
+.submenu{
+margin-top:8px;
+}
 
-<div class="submenu">
-<strong>Kişiye Özel</strong>
-<div class="submenu-content">
-<a href="#">Anahtarlık</a>
-<a href="#">Bardak Altlığı</a>
-<a href="#">Bilgisayar Süsleri</a>
-<a href="#">Gözlük Altlığı</a>
-<a href="#">Yastık Kılıfı</a>
-</div>
-</div>
-
-</div>
-</div>
-
-<a href="#">Siparişlerim</a>
-<a href="#">Sepetim</a>
-
-</nav>
+.submenu-content{
+margin-left:10px;
+}
 
 </style>
 
