@@ -132,8 +132,16 @@ cursor:pointer;
 
 .menu{
 display:flex;
-gap:25px;
-align-items:center;
+justify-content:center;
+gap:30px;
+background:#6E1F2F;
+padding:15px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
 .dropdown{
@@ -141,19 +149,21 @@ position:relative;
 }
 
 .dropbtn{
-background:none;
+background:#6E1F2F;
+color:white;
 border:none;
-font-size:16px;
+font-weight:bold;
 cursor:pointer;
 }
 
 .dropdown-content{
 display:none;
 position:absolute;
-background:#f3e5df;
-min-width:200px;
-padding:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+top:35px;
+background:white;
+min-width:220px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+padding:15px;
 }
 
 .dropdown:hover .dropdown-content{
@@ -162,13 +172,15 @@ display:block;
 
 .dropdown-content a{
 display:block;
+color:#333;
 padding:5px 0;
 text-decoration:none;
-color:#333;
 }
 
-.submenu{
-margin-top:8px;
+.submenu strong{
+display:block;
+margin-top:10px;
+color:#6E1F2F;
 }
 
 .submenu-content{
