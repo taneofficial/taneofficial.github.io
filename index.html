@@ -19,8 +19,8 @@ body { margin:0; font-family:Arial, sans-serif; background:#f5efe6; }
 
 /* NAVBAR */
 .navbar {
-  display:flex; justify-content:center; background:#6E1F2F; padding:10px;
-  position:sticky; top:0; z-index:1000;
+  display:flex; justify-content:center; align-items:center;
+  background:#6E1F2F; padding:10px; position:sticky; top:0; z-index:1000;
 }
 .navbar a, .dropbtn {
   color:white; text-decoration:none; font-weight:bold; font-size:16px;
@@ -31,7 +31,7 @@ body { margin:0; font-family:Arial, sans-serif; background:#f5efe6; }
 /* DROPDOWN / MEGA MENU */
 .dropdown { position:relative; display:inline-block; }
 .dropdown-content {
-  display:none;
+  display:none; /* Başlangıçta gizli */
   position:absolute;
   background:white;
   width:700px;
@@ -52,6 +52,21 @@ body { margin:0; font-family:Arial, sans-serif; background:#f5efe6; }
   text-decoration:none; color:#333; padding:4px 0; font-size:14px;
 }
 .dropdown-group a:hover { background:#f2f2f2; }
+
+/* ARAMA ÇUBUĞU */
+.navbar form {
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+}
+.navbar input[type="text"] {
+  padding:5px; border-radius:4px; border:none;
+}
+.navbar button {
+  padding:5px 10px; margin-left:5px; background:#fff; color:#6E1F2F; border:none; border-radius:4px;
+  cursor:pointer;
+}
+.navbar button:hover { background:#f2f2f2; }
 
 /* ANA KATEGORİ KARTLARI */
 .categories {
@@ -75,6 +90,7 @@ body { margin:0; font-family:Arial, sans-serif; background:#f5efe6; }
   .dropdown-content { flex-direction:column; width:90vw; }
   .navbar { flex-direction:column; }
   .categories { flex-direction:column; align-items:center; }
+  .navbar form { margin-left:0; margin-top:10px; }
 }
 </style>
 </head>
@@ -131,6 +147,12 @@ body { margin:0; font-family:Arial, sans-serif; background:#f5efe6; }
 
   <a href="#">Siparişlerim</a>
   <a href="sepet.html">Sepetim</a>
+
+  <!-- ARAMA -->
+  <form action="arama.html" method="GET">
+    <input type="text" name="q" placeholder="Ürün ara...">
+    <button type="submit">Ara</button>
+  </form>
 </div>
 
 <!-- HERO -->
