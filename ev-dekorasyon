@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ev Dekorasyonu - tane.co</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5efe6;}
+.header{background:#6E1F2F;color:white;text-align:center;padding:20px;}
+.back{display:inline-block;margin:20px;color:#6E1F2F;text-decoration:none;font-weight:bold;}
+.subcategories{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:20px;}
+.subcategories a{background:#6E1F2F;color:white;text-decoration:none;padding:10px 15px;border-radius:8px;}
+.products{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;padding:20px;}
+.product-card{width:250px;background:white;border-radius:10px;padding:15px;box-shadow:0 4px 10px rgba(0,0,0,.1);}
+.product-image{height:250px;background:#ddd;display:flex;align-items:center;justify-content:center;}
+.price{color:#6E1F2F;font-weight:bold;}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Ev Dekorasyonu</h1>
+</div>
+
+<a class="back" href="index.html">← Anasayfaya Dön</a>
+
+<div class="subcategories">
+<a href="ayna.html">Ayna</a>
+<a href="cerceve.html">Çerçeve</a>
+<a href="duvar-susu.html">Duvar Süsü</a>
+<a href="kapi-susu.html">Kapı Süsü</a>
+<a href="vazo.html">Vazo</a>
+</div>
+
+<div class="products">
+</div>
+
+</body>
+</html>
