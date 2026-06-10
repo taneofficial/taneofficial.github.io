@@ -1,171 +1,291 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head
+<head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>tane.co</title>
+
 <style>
-body { margin:0; font-family:Arial, sans-serif; background:#f5efe6; }
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5efe6;
+}
 
 /* LOGO */
-.header {
-  display:flex; justify-content:center; padding:20px;
+
+.header{
+    display:flex;
+    justify-content:center;
+    padding:20px;
 }
-.logo {
-  font-size:28px; font-weight:bold; color:#6E1F2F; text-align:center;
+
+.logo{
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+    color:#6E1F2F;
 }
-.logo span {
-  display:block; font-size:12px; color:#444;
+
+.logo span{
+    display:block;
+    font-size:13px;
+    color:#555;
 }
 
 /* NAVBAR */
-.navbar {
-  display:flex; justify-content:center; align-items:center;
-  background:#6E1F2F; padding:10px; position:sticky; top:0; z-index:1000;
-}
-.navbar a, .dropbtn {
-  color:white; text-decoration:none; font-weight:bold; font-size:16px;
-  padding:10px; cursor:pointer;
-}
-.navbar a:hover, .dropbtn:hover { background:#5a1a28; }
 
-/* DROPDOWN / MEGA MENU */
-.dropdown { position:relative; display:inline-block; }
-.dropdown-content {
-  display:none; /* Başlangıçta gizli */
-  position:absolute;
-  background:white;
-  width:700px;
-  top:100%;
-  left:0;
-  padding:20px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-  z-index:1001;
-  display:flex; gap:20px;
+.navbar{
+    display:flex;
+    align-items:center;
+    background:#6E1F2F;
+    padding:10px 20px;
+    gap:10px;
 }
-.dropdown:hover .dropdown-content { display:flex; }
 
-.dropdown-group { display:flex; flex-direction:column; flex:1; }
-.dropdown-group strong {
-  font-size:16px; color:#6E1F2F; margin-bottom:10px;
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:10px;
 }
-.dropdown-group a {
-  text-decoration:none; color:#333; padding:4px 0; font-size:14px;
-}
-.dropdown-group a:hover { background:#f2f2f2; }
 
-/* ARAMA ÇUBUĞU */
-.navbar form {
-  margin-left:auto;
-  display:flex;
-  align-items:center;
+.navbar a:hover{
+    background:#53202d;
+    border-radius:5px;
 }
-.navbar input[type="text"] {
-  padding:5px; border-radius:4px; border:none;
-}
-.navbar button {
-  padding:5px 10px; margin-left:5px; background:#fff; color:#6E1F2F; border:none; border-radius:4px;
-  cursor:pointer;
-}
-.navbar button:hover { background:#f2f2f2; }
 
-/* ANA KATEGORİ KARTLARI */
-.categories {
-  display:flex; justify-content:center; flex-wrap:wrap; margin:60px 0;
-  gap:30px;
+/* DROPDOWN */
+
+.dropdown{
+    position:relative;
 }
-.card {
-  background:white; width:220px; text-align:center; padding:20px;
-  border-radius:8px; box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
+
+.dropbtn{
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    padding:10px;
 }
-.card:hover { transform:scale(1.05); }
-.card a { text-decoration:none; color:#333; font-weight:bold; font-size:18px; }
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:800px;
+    background:white;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+.dropdown:hover .dropdown-content{
+    display:flex;
+    gap:30px;
+}
+
+.dropdown-group{
+    flex:1;
+}
+
+.dropdown-group strong{
+    display:block;
+    margin-bottom:10px;
+    color:#6E1F2F;
+    font-size:16px;
+}
+
+.dropdown-group a{
+    display:block;
+    color:#333;
+    padding:4px 0;
+    text-decoration:none;
+}
+
+.dropdown-group a:hover{
+    color:#6E1F2F;
+}
+
+/* ARAMA */
+
+.search-box{
+    margin-left:auto;
+    display:flex;
+    gap:5px;
+}
+
+.search-box input{
+    padding:8px;
+    border:none;
+    border-radius:5px;
+}
+
+.search-box button{
+    padding:8px 12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:white;
+}
 
 /* HERO */
-.hero { display:flex; justify-content:center; margin-top:40px; }
-.hero img { width:500px; border-radius:6px; }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .dropdown-content { flex-direction:column; width:90vw; }
-  .navbar { flex-direction:column; }
-  .categories { flex-direction:column; align-items:center; }
-  .navbar form { margin-left:0; margin-top:10px; }
+.hero{
+    text-align:center;
+    margin-top:40px;
 }
+
+.hero img{
+    width:90%;
+    max-width:900px;
+    border-radius:10px;
+}
+
+/* KARTLAR */
+
+.categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin:50px 20px;
+}
+
+.card{
+    width:220px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    padding:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card a{
+    text-decoration:none;
+    color:#333;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* MOBİL */
+
+@media(max-width:768px){
+
+.dropdown-content{
+    width:90vw;
+    flex-direction:column;
+}
+
+.navbar{
+    flex-wrap:wrap;
+}
+
+.search-box{
+    width:100%;
+    margin-top:10px;
+}
+
+.search-box input{
+    flex:1;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<!-- LOGO -->
 <div class="header">
-  <div class="logo">
-    tane.co
-    <span>Handmade Designs</span>
-    <span>Made For You</span>
-  </div>
-</div>
-
-<!-- NAVBAR -->
-<div class="navbar">
-  <a href="index.html">Anasayfa</a>
-
-  <!-- Mega Menu -->
-  <div class="dropdown">
-    <span class="dropbtn">Kategori</span>
-    <div class="dropdown-content">
-      <!-- ÇANTA -->
-      <div class="dropdown-group">
-        <strong>Çanta</strong>
-        <a href="boncuk-canta.html">Boncuk Çanta</a>
-        <a href="punch-canta.html">Punch Çanta</a>
-      </div>
-      <!-- EV DEKORASYONU -->
-      <div class="dropdown-group">
-        <strong>Ev Dekorasyonu</strong>
-        <a href="cerceve.html">Çerçeve</a>
-        <a href="duvar-susu.html">Duvar Süsü</a>
-        <a href="kapi-susu.html">Kapı Süsü</a>
-        <a href="vazo.html">Vazo</a>
-      </div>
-      <!-- DÜĞÜN & NİŞAN -->
-      <div class="dropdown-group">
-        <strong>Düğün & Nişan</strong>
-        <a href="dugun-nisan.html">Tüm Ürünler</a>
-      </div>
-      <!-- KİŞİYE ÖZEL -->
-      <div class="dropdown-group">
-        <strong>Kişiye Özel</strong>
-        <a href="anahtarlik.html">Anahtarlık</a>
-        <a href="bardak-altligi.html">Bardak Altlığı</a>
-        <a href="bilgisayar-susu.html">Bilgisayar Süsü</a>
-        <a href="gozluk-tabagi.html">Gözlük Tabağı</a>
-        <a href="yastik-kilif.html">Yastık/Kırlent Kılıfı</a>
-        <a href="telefon-kilif.html">Telefon Kılıfı</a>
-      </div>
+    <div class="logo">
+        tane.co
+        <span>El Yapımı Tasarımlar</span>
+        <span>Senin İçin Özel Üretildi</span>
     </div>
-  </div>
-
-  <a href="#">Siparişlerim</a>
-  <a href="sepet.html">Sepetim</a>
-
-  <!-- ARAMA -->
-  <form action="arama.html" method="GET">
-    <input type="text" name="q" placeholder="Ürün ara...">
-    <button type="submit">Ara</button>
-  </form>
 </div>
 
-<!-- HERO -->
+<div class="navbar">
+
+    <a href="index.html">Anasayfa</a>
+
+    <div class="dropdown">
+
+        <span class="dropbtn">Kategori ▼</span>
+
+        <div class="dropdown-content">
+
+            <div class="dropdown-group">
+                <strong>Çanta</strong>
+                <a href="boncuk-canta.html">Boncuk Çanta</a>
+                <a href="punch-canta.html">Punch Çanta</a>
+            </div>
+
+            <div class="dropdown-group">
+                <strong>Ev Dekorasyonu</strong>
+                <a href="cerceve.html">Çerçeve</a>
+                <a href="duvar-susu.html">Duvar Süsü</a>
+                <a href="kapi-susu.html">Kapı Süsü</a>
+                <a href="vazo.html">Vazo</a>
+            </div>
+
+            <div class="dropdown-group">
+                <strong>Düğün & Nişan</strong>
+                <a href="dugun-nisan.html">Tüm Ürünler</a>
+            </div>
+
+            <div class="dropdown-group">
+                <strong>Kişiye Özel</strong>
+                <a href="anahtarlik.html">Anahtarlık</a>
+                <a href="bardak-altligi.html">Bardak Altlığı</a>
+                <a href="bilgisayar-susu.html">Bilgisayar Süsü</a>
+                <a href="gozluk-tabagi.html">Gözlük Tabağı</a>
+                <a href="yastik-kilif.html">Yastık/Kırlent Kılıfı</a>
+                <a href="telefon-kilif.html">Telefon Kılıfı</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a href="#">Siparişlerim</a>
+    <a href="sepet.html">Sepetim</a>
+
+    <form class="search-box">
+        <input type="text" placeholder="Ürün ara...">
+        <button type="submit">Ara</button>
+    </form>
+
+</div>
+
 <div class="hero">
-  <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=60">
+    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80">
 </div>
 
-<!-- ANA KATEGORİ KARTLARI -->
 <div class="categories">
-  <div class="card"><a href="tum-cantalar.html">Çanta</a></div>
-  <div class="card"><a href="ev.html">Ev Dekorasyonu</a></div>
-  <div class="card"><a href="kisiye-ozel.html">Kişiye Özel</a></div>
-  <div class="card"><a href="dugun-nisan.html">Düğün & Nişan</a></div>
+
+    <div class="card">
+        <a href="tum-cantalar.html">Çanta</a>
+    </div>
+
+    <div class="card">
+        <a href="ev.html">Ev Dekorasyonu</a>
+    </div>
+
+    <div class="card">
+        <a href="dugun-nisan.html">Düğün & Nişan</a>
+    </div>
+
+    <div class="card">
+        <a href="kisiye-ozel.html">Kişiye Özel</a>
+    </div>
+
 </div>
 
 </body>
