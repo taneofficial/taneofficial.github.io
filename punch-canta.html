@@ -2,58 +2,139 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Punch Çanta | tane.co</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punch Çanta - tane.co</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#f5efe6;}
-.header{display:flex;align-items:center;justify-content:space-between;padding:20px 60px;}
-.logo{font-size:28px;font-weight:bold;color:#6E1F2F;}
-.logo span{display:block;font-size:12px;color:#444;}
-.navbar{display:flex;justify-content:center;gap:40px;background:#6E1F2F;padding:15px;position:sticky;top:0;z-index:1000;}
-.navbar a{color:white;text-decoration:none;font-weight:bold;}
-.products{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin:40px;}
-.product{width:220px;background:white;padding:20px;text-align:center;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
-.product img{width:100%;}
-.product h3{font-size:18px;color:#6E1F2F;}
-.product p{color:#333;}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5efe6;
+}
+
+.header{
+    background:#6E1F2F;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.back{
+    display:inline-block;
+    margin:20px;
+    text-decoration:none;
+    color:#6E1F2F;
+    font-weight:bold;
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:20px;
+}
+
+.product-card{
+    width:260px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    overflow:hidden;
+}
+
+.product-image{
+    height:280px;
+    background:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    color:#666;
+}
+
+.product-info{
+    padding:15px;
+    text-align:center;
+}
+
+.product-info h3{
+    margin:0 0 10px;
+}
+
+.price{
+    color:#6E1F2F;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.cart-btn{
+    display:inline-block;
+    background:#6E1F2F;
+    color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:8px;
+}
+
+.cart-btn:hover{
+    opacity:.9;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="header">
-<div class="logo">
-tane.co
-<span>Handmade Designs</span>
-<span>Made For You</span>
-</div>
+    <h1>Punch Çanta</h1>
 </div>
 
-<div class="navbar">
-<a href="index.html">Anasayfa</a>
-<div class="dropdown">
-<button class="dropbtn">Kategori</button>
-<div class="dropdown-content">
-<a href="boncuk-canta.html">Boncuk Çanta</a>
-<a href="punch-canta.html">Punch Çanta</a>
-</div>
-</div>
-<a href="#">Siparişlerim</a>
-<a href="sepet.html">Sepetim</a>
-</div>
-
-<h2 style="text-align:center;margin-top:40px;color:#6E1F2F;">Punch Çantalar</h2>
+<a class="back" href="tum-cantalar.html">← Çanta Kategorisine Dön</a>
 
 <div class="products">
-<!-- Punch Çantaları buraya ekle -->
-<div class="product">
-<img src="">
-<h3>Punch Çanta 1</h3>
-<p>Fiyat</p>
-</div>
-<div class="product">
-<img src="">
-<h3>Punch Çanta 2</h3>
-<p>Fiyat</p>
-</div>
+
+    <!-- ÜRÜN 1 -->
+    <div class="product-card">
+        <div class="product-image">
+            Fotoğraf Eklenecek
+        </div>
+
+        <div class="product-info">
+            <h3>Punch Çanta Modeli</h3>
+            <div class="price">₺0</div>
+            <a href="#" class="cart-btn">Sepete Ekle</a>
+        </div>
+    </div>
+
+    <!-- ÜRÜN 2 -->
+    <div class="product-card">
+        <div class="product-image">
+            Fotoğraf Eklenecek
+        </div>
+
+        <div class="product-info">
+            <h3>Punch Çanta Modeli</h3>
+            <div class="price">₺0</div>
+            <a href="#" class="cart-btn">Sepete Ekle</a>
+        </div>
+    </div>
+
+    <!-- ÜRÜN 3 -->
+    <div class="product-card">
+        <div class="product-image">
+            Fotoğraf Eklenecek
+        </div>
+
+        <div class="product-info">
+            <h3>Punch Çanta Modeli</h3>
+            <div class="price">₺0</div>
+            <a href="#" class="cart-btn">Sepete Ekle</a>
+        </div>
+    </div>
+
 </div>
 
 </body>
